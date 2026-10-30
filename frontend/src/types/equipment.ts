@@ -1,6 +1,6 @@
-export type EquipmentStatus = "NORMAL" | "WARNING" | "ERROR";
+export type EquipmentStatus = "RUNNING" | "STOPPED" | "WARNING";
 
-export interface Equipment {
+export interface Equipment  {
   id: number;
   name: string;
   status: EquipmentStatus;

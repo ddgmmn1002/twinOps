@@ -4,7 +4,7 @@ export const equipmentData: Equipment[] = [
     {
         id: 1,
         name: "CNC MACHINE 01",
-        status: "NORMAL",
+        status: "RUNNING",
         temperature: 42.5
     },
     {
@@ -16,25 +16,25 @@ export const equipmentData: Equipment[] = [
     {
         id: 3,
         name: "PRESS MACHINE 01",
-        status: "ERROR",
+        status: "STOPPED",
         temperature: 91.4
-    }
+    },
     {
-    id: 4,
-    name: "CNC Machine 02",
-    status: "NORMAL",
-    temperature: 39.8,
-  },
-  {
-    id: 5,
-    name: "Robot Arm 02",
-    status: "NORMAL",
-    temperature: 45.1,
-  },
-  {
-    id: 6,
-    name: "Conveyor 01",
-    status: "NORMAL",
-    temperature: 37.6,
-  },
+        id: 4,
+        name: "CNC Machine 02",
+        status: "RUNNING",
+        temperature: 39.8,
+    },
+    {
+        id: 5,
+        name: "Robot Arm 02",
+        status: "STOPPED",
+        temperature: 45.1,
+    },
+    {
+        id: 6,
+        name: "Conveyor 01",
+        status: "STOPPED",
+        temperature: 37.6,
+    },
 ]
