@@ -34,7 +34,7 @@ export const equipmentData: Equipment[] = [
     {
         id: 6,
         name: "Conveyor 01",
-        status: "STOPPED",
+        status: "RUNNING",
         temperature: 37.6,
     },
 ]
