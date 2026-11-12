@@ -58,11 +58,13 @@ Spring Boot → React
 
 ## Current Progress
 
-진행 현황 갱신: 2026-10-31 (Asia/Seoul)
+진행 현황 갱신: 2026-11-12 (Asia/Seoul)
 
-- Task 01~03: 완료 — 사용자 재확인 기준.
-- Task 04: 완료 — 사용자 완료 보고 기준.
-- Task 01~04 완료. 다음 작업: Task 05 — GLB/GLTF + OrbitControls. Task 05 시작·완료 여부는 미확인.
+- Task 01~04: 완료 — 기존 프로젝트 기록 및 사용자 보고 기준.
+- Task 05: 완료 — 사용자 완료 보고 기준. GLB/GLTF 모델 로딩, OrbitControls, GLB Material 색상 변경 학습 및 필수 완료 조건 달성.
+- Task 05 GitHub PR의 `main` 병합 완료 — 사용자 보고 기준.
+- 전체 21개 Task 중 Task 01~05 완료 (5/21). 다음 작업: Task 06 — 3D object selection + equipment panel.
+- 실제 소스 코드, 브라우저 동작, 빌드/테스트 결과와 원격 Git 기록을 직접 검증한 것은 아님.
 
 ### Task 01 — React Basics + EquipmentCard ✅
 
@@ -106,12 +108,13 @@ Status: 완료 — 사용자 완료 보고 기준.
 
 ## Current Task
 
-Task 05 — GLB/GLTF + OrbitControls (다음 작업)
+Task 06 — 3D object selection + equipment panel (다음 작업)
 
 Status basis:
-- 사용자가 “TASK4까지 완료”했다고 보고하여 Task 01~04를 완료로 표시한다.
-- Task 04는 사용자 완료 보고만 확인되었다. 실제 코드, 실행 화면, 세부 구현, 설치 버전, 빌드·테스트 결과 및 Git 반영은 확인하지 않았다.
-- Task 05는 다음 작업이며 시작하거나 완료한 것으로 기록하지 않는다.
+- Task 01~04 완료 내용은 기존 문서 및 사용자 보고 기준이다.
+- 사용자가 Task 05 필수 완료 조건 달성과 GitHub PR의 `main` 병합을 보고했다.
+- Task 05 실제 코드·실행 화면·빌드 결과·원격 커밋은 직접 검증하지 않았다.
+- Task 06은 다음 작업이며 시작·완료 여부는 확인되지 않았다.
 
 ### Task 04 — Three.js basics + React Three Fiber ✅
 
@@ -136,6 +139,29 @@ Status: 완료 — 사용자 보고 기준. 아래 목표·계획·체크리스�
 - [ ] 기존 Dashboard 기능 유지
 
 이전 대화에서 OrbitControls를 이용한 회전·확대·축소도 Task 04 목표로 제안되었으나, 원본 로드맵의 Task 05(GLB/GLTF + OrbitControls) 배정은 유지한다. Task 04에서 미리 다룰 경우 선행 학습으로 기록하며 로드맵 변경으로 간주하지 않는다.
+
+### Task 05 — GLB/GLTF + OrbitControls ✅
+
+Status: 완료 — 2026-11-12 문서 반영, 사용자 완료 보고 기준 (실제 작업 완료일은 미확인).
+
+- GLB/GLTF 모델을 가져와 React Three Fiber 환경에서 로딩하는 작업을 진행함.
+- OrbitControls를 이용한 3D 모델 조작을 학습함.
+- GLB 모델 Material 색상을 변경하는 작업을 진행함.
+- 사용자가 Task 05의 필수 완료 조건을 모두 달성했다고 보고함.
+- Task 05 PR을 GitHub `main` 브랜치에 병합했다고 보고함.
+- 이후 `git fetch`와 `git pull`의 차이를 학습하고 이해도 확인 질문에 올바르게 답함.
+- 코드 구조, 모델 구성, 빌드/테스트 및 원격 Git 상태는 직접 검증하지 않음.
+- 세부 기록은 `development-log.md`를 참고.
+
+### Task 06 — 3D object selection + equipment panel (다음 작업)
+
+Planned goal:
+- 3D 객체 클릭 시 해당 설비를 선택하도록 구현
+- 선택된 설비 ID와 React 상태 연결
+- 선택 설비의 정보를 Equipment Panel에 표시
+- 기존 Dashboard와 3D 모델 기능 유지
+
+이 목록은 Task 06의 계획이며 구현 완료 기록이 아니다.
 
 ### React / TypeScript Learning Policy
 
@@ -167,8 +193,8 @@ Target level by project completion:
 
 3. Task 03: Dashboard UI + CSS ✅ 완료
 4. Task 04: Three.js basics + React Three Fiber ✅ 완료 — 사용자 보고 기준
-5. Task 05: GLB/GLTF + OrbitControls — 다음 작업
-6. Task 06: 3D object selection + equipment panel
+5. Task 05: GLB/GLTF + OrbitControls ✅ 완료 — 사용자 보고 기준
+6. Task 06: 3D object selection + equipment panel — 다음 작업
 7. Task 07: Spring Boot
 8. Task 08: PostgreSQL + JPA
 9. Task 09: CRUD API
@@ -192,3 +218,11 @@ Target level by project completion:
 - 사용자 결정에 따라 마감을 2026-11-08에서 2026-11-15로 연장한다. 배포 및 CI/CD 완료 목표는 유지한다.
 - 기존 21개 작업의 범위·순서, 기술 스택, 아키텍처 및 React / TypeScript 학습 정책은 유지한다. 개별 작업 날짜를 새로 배정하지 않는다.
 - Task 04 완료는 사용자 보고 기준이며 상세 구현 확인을 의미하지 않는다.
+
+## 진행 사항 갱신 — 2026-11-12
+
+- Task 05 완료 및 GitHub PR `main` 병합을 사용자 보고 기준으로 반영했다.
+- 현재 진행 대상은 Task 06으로 변경했다.
+- Git 학습: `fetch`는 원격 커밋과 객체를 가져와 원격 추적 참조를 갱신하며, `pull`은 가져온 변경 사항을 현재 브랜치에 통합한다는 차이를 학습했다.
+- 마감일 2026-11-15, 기존 21개 Task 순서와 기술 스택, 아키텍처는 변경하지 않았다.
+- `LEARNING_GUIDE.md`는 ChatGPT TwinOps 프로젝트 전용 학습 운영 문서이며 GitHub 저장소 관리 대상에서 제외한다.
