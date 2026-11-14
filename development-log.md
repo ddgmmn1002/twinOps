@@ -1,6 +1,6 @@
 # TwinOps 개발 기록
 
-## 최신 진행 요약 — 2026-11-12
+## 최신 진행 요약 — 2026-11-14
 
 - Task 01: React Basics + EquipmentCard — 완료.
 - Task 02: TypeScript + Props + EquipmentCard 타입화 — 완료.
@@ -8,14 +8,15 @@
 - Task 04: Three.js basics + React Three Fiber — 완료 (사용자 보고 기준).
 - Task 05: GLB/GLTF + OrbitControls — 완료 (사용자 보고 기준). GLB 모델 로딩, 카메라 조작, Material 색상 변경을 학습·진행함.
 - Task 05 작업을 GitHub Pull Request로 `main` 브랜치에 병합했다고 사용자가 보고함.
-- Task 01~05 완료. 다음 작업: Task 06 — 3D object selection + equipment panel.
+- Task 06: 3D equipment selection — 완료 (사용자 보고 기준). 원격 Push, PR 생성 및 `main` Merge 완료를 보고함.
+- Task 01~06 완료. 다음 작업: Task 07 — Spring Boot.
 - 마감: 2026-11-15 — 배포 및 CI/CD 완료 목표 (변경 없음).
 
 ## 기록 기준
 
-- 최초 문서 정리일: 2026-10-28. 최신 갱신일: 2026-11-12 (Asia/Seoul). 각 Task의 실제 작업 날짜는 확인되지 않아 별도로 지정하지 않는다.
+- 최초 문서 정리일: 2026-10-28. 최신 갱신일: 2026-11-14 (Asia/Seoul). 각 Task의 실제 작업 날짜는 확인되지 않아 별도로 지정하지 않는다.
 - 근거: 업로드된 원본 `PROJECT_CONTEXT.md`와 「TwinOps - Project Manager」 대화의 완료 보고 및 계획.
-- Task 01·02의 완료 내용은 원본 컨텍스트에 기록된 사항이다. Task 03~05 완료 및 Git 반영 상태는 사용자 보고 기준이다.
+- Task 01·02의 완료 내용은 원본 컨텍스트에 기록된 사항이다. Task 03~06 완료 및 Git 반영 상태는 사용자 보고 기준이다.
 - 이 문서 작성 과정에서 실제 소스 코드, 브라우저 실행 화면, Git 저장소 또는 테스트 결과를 검증하지 않았다.
 - 프로젝트 의사결정과 로드맵의 기준은 `PROJECT_CONTEXT.md`이며, 이 개발 기록은 기존 계획을 변경하지 않는다.
 
@@ -142,7 +143,33 @@ Task 06 — 3D object selection + equipment panel.
 - 선택된 설비 데이터를 Equipment Panel에 표시
 - 실제 센서 / Backend 실시간 연동은 이후 Task에서 진행
 
-Task 06은 아직 완료된 것으로 기록하지 않는다.
+이 단락은 Task 05 종료 시점의 인계 기록이다. Task 06의 최신 완료 상태는 아래 별도 기록을 따른다.
+
+## Task 06 — 3D Object Selection + Equipment Panel
+
+상태: 완료 — 사용자 보고 기준. 실제 완료일은 확인하지 않았다.
+
+### 작업 목표 및 결과
+
+- 기존 Task 06 목표: GLB 모델의 설비 클릭 이벤트 처리, 선택 설비 ID 상태 관리, Equipment Panel의 설비 정보 표시, 기존 Dashboard와 3D 모델 기능 유지.
+- 사용자는 Task 06의 Equipment Selection 기능을 완료했다고 보고했다.
+- 세부 객체 매핑 방식, 실제 컴포넌트 코드, 빌드 결과, 브라우저 검증은 직접 확인하지 않았다. 원래 목표의 모든 하위 항목을 독립적으로 검증한 것은 아니다.
+
+### Git 반영 기록
+
+- 사용자가 Task 06 작업 브랜치의 원격 Push 완료를 보고했다.
+- 이후 PR을 생성하고 `main`으로 Merge까지 완료했다고 명시적으로 확인했다.
+- 브랜치의 정확한 이름, PR 번호, 커밋 해시, CI 실행 여부는 확인되지 않았다.
+
+### 다음 Task 인계
+
+Task 07 — Spring Boot 기초 및 REST API.
+
+- Java 21 기반 Spring Boot 프로젝트 설정 및 서버 실행
+- Controller / Service 계층과 Stateless Service 개념 이해
+- 기본 Equipment GET API 구현 및 JSON 응답 확인
+- DB 연동은 원래 일정에 따라 Task 08에서 수행
+- Task 07의 시작 여부와 Spring Initializr 설정/생성 여부는 아직 확인되지 않았다.
 
 ## 의사결정 갱신 — 2026-10-31 문서 반영
 

@@ -58,12 +58,13 @@ Spring Boot → React
 
 ## Current Progress
 
-진행 현황 갱신: 2026-11-12 (Asia/Seoul)
+진행 현황 갱신: 2026-11-14 (Asia/Seoul)
 
 - Task 01~04: 완료 — 기존 프로젝트 기록 및 사용자 보고 기준.
 - Task 05: 완료 — 사용자 완료 보고 기준. GLB/GLTF 모델 로딩, OrbitControls, GLB Material 색상 변경 학습 및 필수 완료 조건 달성.
 - Task 05 GitHub PR의 `main` 병합 완료 — 사용자 보고 기준.
-- 전체 21개 Task 중 Task 01~05 완료 (5/21). 다음 작업: Task 06 — 3D object selection + equipment panel.
+- Task 06: 3D equipment selection 구현 완료 및 원격 Push, PR 생성, `main` Merge 완료 — 사용자 보고 기준.
+- 전체 21개 Task 중 Task 01~06 완료 (6/21). 다음 작업: Task 07 — Spring Boot.
 - 실제 소스 코드, 브라우저 동작, 빌드/테스트 결과와 원격 Git 기록을 직접 검증한 것은 아님.
 
 ### Task 01 — React Basics + EquipmentCard ✅
@@ -108,13 +109,13 @@ Status: 완료 — 사용자 완료 보고 기준.
 
 ## Current Task
 
-Task 06 — 3D object selection + equipment panel (다음 작업)
+Task 07 — Spring Boot (다음 작업)
 
 Status basis:
-- Task 01~04 완료 내용은 기존 문서 및 사용자 보고 기준이다.
-- 사용자가 Task 05 필수 완료 조건 달성과 GitHub PR의 `main` 병합을 보고했다.
-- Task 05 실제 코드·실행 화면·빌드 결과·원격 커밋은 직접 검증하지 않았다.
-- Task 06은 다음 작업이며 시작·완료 여부는 확인되지 않았다.
+- Task 01~05 완료 내용은 기존 문서 및 사용자 보고 기준이다.
+- 사용자가 Task 06 Equipment Selection 완료와 GitHub 원격 Push, PR 생성 및 `main` Merge 완료를 보고했다.
+- Task 06 실제 코드·실행 화면·빌드 결과·원격 Git 이력은 직접 검증하지 않았다.
+- Task 07 Spring Boot 프로젝트 생성 및 실행 여부는 아직 확인되지 않았다.
 
 ### Task 04 — Three.js basics + React Three Fiber ✅
 
@@ -153,7 +154,7 @@ Status: 완료 — 2026-11-12 문서 반영, 사용자 완료 보고 기준 (실
 - 코드 구조, 모델 구성, 빌드/테스트 및 원격 Git 상태는 직접 검증하지 않음.
 - 세부 기록은 `development-log.md`를 참고.
 
-### Task 06 — 3D object selection + equipment panel (다음 작업)
+### Task 06 — 3D object selection + equipment panel ✅
 
 Planned goal:
 - 3D 객체 클릭 시 해당 설비를 선택하도록 구현
@@ -161,7 +162,17 @@ Planned goal:
 - 선택 설비의 정보를 Equipment Panel에 표시
 - 기존 Dashboard와 3D 모델 기능 유지
 
-이 목록은 Task 06의 계획이며 구현 완료 기록이 아니다.
+Status: 완료 — 사용자 보고 기준. 위 목록은 원래 계획이며 각 항목의 세부 구현은 직접 검증하지 않았다.
+
+Git: 작업 브랜치를 원격에 Push하고 PR 생성 후 `main`에 Merge했다고 사용자가 확인했다. PR 번호·커밋 해시·자동 테스트 결과는 확인하지 않았다.
+
+### Task 07 — Spring Boot (다음 작업)
+
+- Spring Boot 프로젝트 생성 및 기본 서버 실행
+- Controller / Service 역할 이해 및 기본 REST API 작성
+- API 응답 확인
+- PostgreSQL/JPA 연동은 Task 08 이후 진행
+- 위 내용은 계획이며 Task 07 실행 및 완료 여부는 미확인이다.
 
 ### React / TypeScript Learning Policy
 
@@ -194,8 +205,8 @@ Target level by project completion:
 3. Task 03: Dashboard UI + CSS ✅ 완료
 4. Task 04: Three.js basics + React Three Fiber ✅ 완료 — 사용자 보고 기준
 5. Task 05: GLB/GLTF + OrbitControls ✅ 완료 — 사용자 보고 기준
-6. Task 06: 3D object selection + equipment panel — 다음 작업
-7. Task 07: Spring Boot
+6. Task 06: 3D object selection + equipment panel ✅ 완료 — 사용자 보고 기준
+7. Task 07: Spring Boot — 다음 작업
 8. Task 08: PostgreSQL + JPA
 9. Task 09: CRUD API
 10. Task 10: React ↔ Spring Boot
@@ -226,3 +237,11 @@ Target level by project completion:
 - Git 학습: `fetch`는 원격 커밋과 객체를 가져와 원격 추적 참조를 갱신하며, `pull`은 가져온 변경 사항을 현재 브랜치에 통합한다는 차이를 학습했다.
 - 마감일 2026-11-15, 기존 21개 Task 순서와 기술 스택, 아키텍처는 변경하지 않았다.
 - `LEARNING_GUIDE.md`는 ChatGPT TwinOps 프로젝트 전용 학습 운영 문서이며 GitHub 저장소 관리 대상에서 제외한다.
+
+## 진행 사항 갱신 — 2026-11-14
+
+- Task 06 Equipment Selection 완료를 사용자 보고 기준으로 반영했다.
+- Task 06 브랜치를 원격 Push하고 PR 생성 및 `main` Merge까지 마쳤다는 최신 사용자 보고를 반영했다.
+- 현재 다음 작업은 Task 07 — Spring Boot이다. Task 07은 아직 시작·완료 확인되지 않았다.
+- 사용자 보고와 별도로 저장소, 코드, 빌드, PR 번호를 직접 검증한 것은 아니다.
+- 기존 21개 Task의 순서/범위, 기술 스택, 아키텍처, 마감일 2026-11-15는 변경하지 않는다.

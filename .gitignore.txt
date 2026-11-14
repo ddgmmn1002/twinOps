@@ -3,3 +3,5 @@ dist/
 .env
 target/
 .idea/
+PROJECT_CONTEXT.md
+development-log.md
