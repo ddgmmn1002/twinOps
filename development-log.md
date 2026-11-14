@@ -1,20 +1,21 @@
 # TwinOps 개발 기록
 
-## 최신 진행 요약 — 2026-10-31
+## 최신 진행 요약 — 2026-11-12
 
-- 사용자가 Task 03까지 완료한 상태임을 다시 확인하여 문서에 반영했다.
 - Task 01: React Basics + EquipmentCard — 완료.
 - Task 02: TypeScript + Props + EquipmentCard 타입화 — 완료.
 - Task 03: Dashboard UI + CSS — 완료.
-- Task 04: Three.js basics + React Three Fiber — 완료. 사용자 완료 보고만 확인됨.
-- Task 01~04 완료. 다음 작업: Task 05 — GLB/GLTF + OrbitControls (시작·완료 여부 미확인).
-- 마감: 2026-11-15 — 배포 및 CI/CD 완료 목표.
+- Task 04: Three.js basics + React Three Fiber — 완료 (사용자 보고 기준).
+- Task 05: GLB/GLTF + OrbitControls — 완료 (사용자 보고 기준). GLB 모델 로딩, 카메라 조작, Material 색상 변경을 학습·진행함.
+- Task 05 작업을 GitHub Pull Request로 `main` 브랜치에 병합했다고 사용자가 보고함.
+- Task 01~05 완료. 다음 작업: Task 06 — 3D object selection + equipment panel.
+- 마감: 2026-11-15 — 배포 및 CI/CD 완료 목표 (변경 없음).
 
 ## 기록 기준
 
-- 최초 문서 정리일: 2026-10-28. 최신 갱신일: 2026-10-31 (Asia/Seoul). 각 Task의 실제 작업 날짜는 확인되지 않아 별도로 지정하지 않는다.
+- 최초 문서 정리일: 2026-10-28. 최신 갱신일: 2026-11-12 (Asia/Seoul). 각 Task의 실제 작업 날짜는 확인되지 않아 별도로 지정하지 않는다.
 - 근거: 업로드된 원본 `PROJECT_CONTEXT.md`와 「TwinOps - Project Manager」 대화의 완료 보고 및 계획.
-- Task 01·02의 완료 내용은 원본 컨텍스트에 기록된 사항이다. Task 03 완료 및 Git 반영 상태는 사용자 보고 기준이다.
+- Task 01·02의 완료 내용은 원본 컨텍스트에 기록된 사항이다. Task 03~05 완료 및 Git 반영 상태는 사용자 보고 기준이다.
 - 이 문서 작성 과정에서 실제 소스 코드, 브라우저 실행 화면, Git 저장소 또는 테스트 결과를 검증하지 않았다.
 - 프로젝트 의사결정과 로드맵의 기준은 `PROJECT_CONTEXT.md`이며, 이 개발 기록은 기존 계획을 변경하지 않는다.
 
@@ -107,6 +108,42 @@ Task 04의 기존 완료 기준은 `PROJECT_CONTEXT.md`에 보존한다. 완료 
 - 위 Scene, Camera, Light, Mesh, Canvas, 기본 도형, 카메라·조명 및 Dashboard 통합 항목은 기존 계획이다. 각 항목의 실제 구현을 검증한 목록이 아니다.
 - 코드 구조, 컴포넌트명, 설비 개수, 상태 연동, 설치 버전, 실행 화면, 빌드·테스트 결과, 커밋·push·병합 여부는 확인되지 않았다. 미확인 내용을 구현 완료 사실로 추정하지 않는다.
 - 다음 작업은 Task 05 — GLB/GLTF + OrbitControls이며 시작·완료 여부는 미확인이다.
+## Task 05 — GLB/GLTF + OrbitControls
+
+상태: 완료 — 사용자 보고 기준. 실제 구현 코드와 테스트 결과는 별도로 검증하지 않음.
+
+### 목표 및 학습 내용
+
+- GLB/GLTF 형식의 3D 모델을 React Three Fiber 화면에 불러오기
+- OrbitControls를 이용한 카메라 회전·확대·축소
+- GLB 모델의 Mesh / Material을 이해하고 색상 변경 진행
+- 기존 Dashboard와 3D 모델의 연결 상태 점검
+
+위 항목 중 GLB 모델 불러오기와 색상 변경을 진행했다고 사용자가 설명했으며, Task 05의 필수 완료 조건을 모두 달성했다고 보고했다. 구체적인 컴포넌트 구조, 모델 종류, Mesh 이름, 빌드 및 브라우저 테스트 결과는 직접 확인하지 않았다.
+
+### 완료 및 Git 반영 기록
+
+- 사용자가 Task 05 완료를 보고했다.
+- Task 05 기능 브랜치의 Pull Request를 GitHub `main`에 병합했다고 보고했다.
+- PR 번호, 실제 커밋 해시, CI 결과는 확인되지 않았다.
+
+### 추가 학습 — Git fetch와 pull
+
+- `git fetch`는 원격 커밋 및 Git 객체를 가져오고 원격 추적 브랜치를 갱신하지만, 로컬 `main`의 작업 내용에 바로 반영하지 않는다는 점을 학습했다.
+- `git pull`은 fetch 후 설정에 따라 merge 또는 rebase로 현재 브랜치에 변경 사항을 반영할 수 있다는 점을 학습했다.
+- 사용자는 확인 질문에서 fetch만으로 로컬 변경 사항이 반영되지 않으며 merge 또는 pull이 필요하다고 올바르게 설명했다.
+
+### 다음 작업 인계
+
+Task 06 — 3D object selection + equipment panel.
+
+- 3D 설비 객체의 클릭 이벤트 처리
+- 선택한 설비 ID를 React 상태에 저장
+- 선택된 설비 데이터를 Equipment Panel에 표시
+- 실제 센서 / Backend 실시간 연동은 이후 Task에서 진행
+
+Task 06은 아직 완료된 것으로 기록하지 않는다.
+
 ## 의사결정 갱신 — 2026-10-31 문서 반영
 
 - 명칭을 Task 01~21로 통일한다. Task는 작업 단위이며 하루 단위 일정이 아니다.
